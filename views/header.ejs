@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title> <%=title %></title>
+       
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+       <link rel="stylesheet" href="/bower_components/weui/dist/style/weui.min.css" />
+       <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+       <link rel="stylesheet" href="/css/common.css">
+    </head>
+    
+   <body>
+<div class="clearfix page-nav">
+
+<% if(user) {%>
+			<div class="pull-left nav-username">欢迎你，<%=user.username%> !!</div>
+			<div class="pull-left"><a class="weui-btn weui-btn_mini weui-btn_default" href="/post">发表</a></div>
+			<div class="pull-right nav-quit"><a class="weui-btn weui-btn_mini weui-btn_default" href="/quit">退出</a></div>
+		<% } else{ %>
+			<div class="pull-right nav-register"><a class="weui-btn weui-btn_mini weui-btn_default" href="/register">注册</a></div>
+			<div class="pull-right nnav-login"><a class="weui-btn weui-btn_mini weui-btn_default" href="/login">登录  </a></div>
+		<% } %>
+
+</div>

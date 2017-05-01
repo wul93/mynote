@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+		 <link rel="stylesheet" href="/bower_components/weui/dist/style/weui.css"> 
+		<!--  <link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/0.4.0/weui.min.css"> -->
+		<link rel="stylesheet" href="/css/common.css">
+	</head>
+	<body>
+	
+<nav class="navbar navbar-default" role="navigation">
+ <div class="navbar-header">
+        <div class="navbar-brand">在线日记薄</div>
+    </div>
+	<%if(user){%>
+	<div class="pull-right navbar-text">欢迎你，<%= user.username%></div>
+	<div class="navbar-text "><a class="weui-btn weui-btn_mini weui-btn_default"href="/post">发表</a></div>
+	<div class="navbar-text"><a class="weui-btn weui-btn_mini weui-btn_default"href="/quit">退出</a></div>
+	<%}else{%>
+	<div class="pull-right nav-register"><a  class="weui-btn weui-btn_mini weui-btn_default" href="/register">注册</a> </div>
+	</div>
+	
+	<div class="pull-right nav-login"><a class="weui-btn weui-btn_mini weui-btn_default" href="/login">登录</a></div>
+	<%}%>
+</nav>
+
+<div class="hd_logo"><img src="/timg.jpg"/> </div>

@@ -1,23 +1,25 @@
 ﻿<%- include header %>
   
 <div class="text-center page-title" ><%=title %></div>
-<div class="container">
- <div class="row">
-       <div class="col-xs-8 col-xs-offset-2">
-	    <div class="article-box">
-		 <h1 class="text-center"><%= art.title %></h1>
-		 <p  class="text-center">
-		   <span class="label label-info"> <%= art.tag %></span>
-		   <span class="create-time"> 
-		   <span class="text-bold">时间:</span>
-		   <%=moment(art.createTime).locale('zh-cn').format('LL HH:mm:ss') %>
-		   </span>
-		   </p>
-		   <p> <%=art.content %> </p>
-		   </div>
-		    </div>
-		    </div>
-		    </div>
+
+			
+			
+		
+		   
+		   
+		   <article class="weui_article">
+    <h4 class="text-center">标题：<%= art.title %></h1>
+    <section>
+        <h5 class="title text-center">标签：<%= art.tag %></h2>
+        <section>
+            
+            <p class="text-center">正文：<%=art.content %></p>
+        </section>
+
+    </section>
+</article>
+		   
+
 		   
 			
    
